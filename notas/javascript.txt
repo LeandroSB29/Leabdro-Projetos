@@ -1,0 +1,19 @@
+para coverter string em numero usa-se o :
+Number.parseInt() ou Number.parseFloat() ou Number()
+
+para converter numero em string usa-se o :
+.String(antes da frase) ou .toStrig(no final da frase)
+
+para um exemplo de salario podemos usar o:
+var n1 = 1512.5
+n1.toFixed(2) // vai colocar até duas casas decimais
+'1512.50'
+n1.toFixed(2).replace('.' , ',') // vai trocar algo por outro
+n1.toLocaleString('pt-br', {stlye : 'currency', currency : 'BRL'}) //vai colocar em valor monetario (currency)
+R$ 1,512.50
+n1.toLocaleString('pt-br', {stlye : 'currency', currency : 'BRL'}).replace('.' , ',')
+R$ 1,512,50
+
+operador ternario é como se fosse um "sim" "não"
+? se caso algo aconteça
+: se caso algo não aconteça

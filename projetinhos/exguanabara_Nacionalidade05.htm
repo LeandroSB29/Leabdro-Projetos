@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar estrangeiros</title>
+</head>
+<body>
+    <h1>Identificação De Nacionalidade</h1>
+    Digite seu nome :<input type="text" name="nome" id="nome" >
+    <input type="button" value="confirmar" onclick="confirmar2()">
+    <div id="resultado_confirmar"></div> 
+    <p>Digite sua nacionalidade : <input type="text" name="nacio" id="nacio" > 
+    <input type="button" value="verificar" onclick="verificar2()"></p>
+    <div id="resultado_verificar"></div> 
+     
+    
+    
+     <script>
+
+        var nomear = ""
+
+        function confirmar2() {
+            var nam = document.querySelector("input#nome").value
+            var res  = document.querySelector("div#resultado_confirmar")
+            nomear = nam
+        
+            res.innerHTML = `Seu nome é ${nomear}`
+        }
+        
+
+        function verificar2() {
+            var nac = document.querySelector("input#nacio").value
+            var res2 = document.querySelector("div#resultado_verificar")
+            if (nomear !== "") {
+                res2.innerHTML =`Olá ${nomear}, Você é ${nac}`
+            }
+            else {
+                res2.innerHTML= "por favor insira o nome primeiro"
+            }
+            
+        }
+     </script>
+</body>
+</html>
